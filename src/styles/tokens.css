@@ -1,0 +1,44 @@
+:root {
+      --ivory: #F5F1E6;
+      --ivory2: #EFE9DA;
+      --ink: #1B2432;
+      --gold: #A97C2F;
+      --gold-lt: #C9A24B;
+      --navy: #14213A;
+      --green: #2E4B3F;
+      --line: rgba(27, 36, 50, .13);
+      --mute: #5C6474;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden
+    }
+
+    ::selection {
+      background: var(--gold-lt);
+      color: #fff
+    }
+
+    .wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 clamp(22px, 4vw, 60px)
+    }
+
+    .serif {
+      font-family: "Playfair Display", serif
+    }

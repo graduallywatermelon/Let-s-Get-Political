@@ -1,0 +1,41 @@
+.guides {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      max-width: 1320px;
+      margin: auto;
+      padding: 0 clamp(22px, 4vw, 60px)
+    }
+
+    .guides i {
+      border-left: 1px solid var(--line)
+    }
+
+    .guides i:last-child {
+      border-right: 1px solid var(--line)
+    }
+
+    #chamberCanvas {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0
+    }
+
+    #gavelCanvas {
+      position: fixed;
+      inset: 0;
+      z-index: 46;
+      pointer-events: none;
+      display: none
+    }
+
+    main,
+    .foot {
+      position: relative;
+      z-index: 5
+    }
