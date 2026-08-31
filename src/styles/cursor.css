@@ -1,0 +1,67 @@
+#cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+      pointer-events: none;
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid var(--ink);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      display: grid;
+      place-items: center;
+      transition: width .32s cubic-bezier(.2, .9, .2, 1), height .32s cubic-bezier(.2, .9, .2, 1), background-color .3s, border-color .3s
+    }
+
+    #cursor .cl {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: 0;
+      transform: scale(.5);
+      transition: opacity .22s, transform .3s cubic-bezier(.2, .9, .2, 1);
+      white-space: nowrap
+    }
+
+    #cursor.big {
+      width: 118px;
+      height: 118px;
+      background: #EFEBDF;
+      border-color: transparent
+    }
+
+    #cursor.big .cl {
+      opacity: 1;
+      transform: scale(1)
+    }
+
+    #cursor.dotmode {
+      width: 10px;
+      height: 10px;
+      background: var(--gold);
+      border-color: transparent
+    }
+
+    @media (pointer:fine) {
+
+      body,
+      a,
+      button,
+      label,
+      #gavelBlock {
+        cursor: none
+      }
+
+      .op-form input {
+        cursor: text
+      }
+    }
+
+    @media (pointer:coarse) {
+      #cursor {
+        display: none
+      }
+    }
