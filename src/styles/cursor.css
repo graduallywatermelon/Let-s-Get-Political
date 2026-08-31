@@ -60,7 +60,8 @@
       }
     }
 
-    @media (pointer:coarse) {
+    /* fallback for coarse pointers below */
+@media (pointer:coarse) {
       #cursor {
         display: none
       }
