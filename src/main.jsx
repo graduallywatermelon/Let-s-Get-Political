@@ -5,6 +5,7 @@ import './styles/tokens.css';
 import './styles/base.css';
 import './styles/cursor.css';
 import './styles/header.css';
+import './styles/hero.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

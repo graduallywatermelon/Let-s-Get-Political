@@ -1,0 +1,111 @@
+.hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 76px
+    }
+
+    .mega {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-size: clamp(64px, 11.4vw, 182px);
+      line-height: .95;
+      letter-spacing: -.02em
+    }
+
+    .mega .row {
+      display: block;
+      overflow: hidden;
+      padding-bottom: .18em;
+      margin-bottom: -.12em
+    }
+
+    .mega .up {
+      display: inline-block;
+      transform: translateY(115%)
+    }
+
+    .mega .up b {
+      color: var(--gold);
+      font-weight: inherit
+    }
+
+    .fly {
+      position: fixed;
+      z-index: 70;
+      left: 0;
+      top: 0;
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-size: 31px;
+      line-height: 1;
+      color: var(--ink);
+      opacity: 0;
+      pointer-events: none;
+      transform-origin: 0 0;
+      will-change: transform, opacity
+    }
+
+    #cycleWrap {
+      display: inline-grid;
+      align-items: start;
+      height: 1em;
+      overflow: hidden;
+      vertical-align: baseline
+    }
+
+    #cycleWrap .w {
+      grid-area: 1/1;
+      color: var(--gold);
+      font-style: italic;
+      transition: transform .6s cubic-bezier(.76, 0, .24, 1), opacity .32s
+    }
+
+    .mega .line3 {
+      display: flex;
+      align-items: baseline
+    }
+
+    .scrollcue {
+      position: absolute;
+      right: clamp(22px, 4vw, 60px);
+      bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--mute)
+    }
+
+    .scrollcue .l {
+      width: 1px;
+      height: 44px;
+      background: linear-gradient(var(--gold), transparent);
+      animation: drip 2.2s infinite
+    }
+
+    @keyframes drip {
+      0% {
+        transform: scaleY(0);
+        transform-origin: top
+      }
+
+      45% {
+        transform: scaleY(1);
+        transform-origin: top
+      }
+
+      55% {
+        transform: scaleY(1);
+        transform-origin: bottom
+      }
+
+      100% {
+        transform: scaleY(0);
+        transform-origin: bottom
+      }
+    }
