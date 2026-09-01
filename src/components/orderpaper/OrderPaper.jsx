@@ -1,5 +1,6 @@
 import '../../styles/orderpaper.css'
 import { orderPaperItems } from '../../data/orderPaperItems';
+import SubscribeForm from './SubscribeForm';
 
 export default function OrderPaper() {
   return (
@@ -11,11 +12,7 @@ export default function OrderPaper() {
           <p>Thirty-eight legislatures are ingested every night from Hansard, UN documents and each house&apos;s own
             proceedings page. What reaches your floor is what was tabled, amended or divided on &mdash; sourced and
             timestamped.</p>
-          <form className="op-form">
-            <input type="email" required placeholder="you@example.org" aria-label="Email address for the weekly order paper" />
-            <button type="submit" data-cursor="Send">Weekly paper</button>
-          </form>
-          <div id="opNote">Added &mdash; the paper posts each Friday, 09:00 GMT.</div>
+          <SubscribeForm />
         </div>
         <div className="op-list reveal">
           {orderPaperItems.map((it) => (
