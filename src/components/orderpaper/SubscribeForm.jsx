@@ -15,6 +15,7 @@ export default function SubscribeForm() {
     if (!EMAIL.test(value)) return;
     setEmail('');
     setNoteOn(true);
+    clearTimeout(timer.current);
     timer.current = setTimeout(() => setNoteOn(false), 4000);
   };
 
