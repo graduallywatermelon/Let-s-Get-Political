@@ -2,9 +2,12 @@ import Cursor from './components/chrome/Cursor';
 import Guides from './components/chrome/Guides';
 import Header from './components/header/Header';
 import Hero from './components/hero/Hero';
+import SeparatorQuote from './components/quote/SeparatorQuote';
 import OrderPaper from './components/orderpaper/OrderPaper';
+import { useReveal } from './hooks/useReveal';
 
 export default function App() {
+  useReveal();
   return (
     <>
       <Guides />
@@ -12,6 +15,7 @@ export default function App() {
       <Header />
       <main id="top">
         <Hero />
+        <SeparatorQuote />
         <OrderPaper />
       </main>
     </>
