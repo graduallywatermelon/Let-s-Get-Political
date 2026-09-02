@@ -1,0 +1,158 @@
+#ledger {
+      background: var(--navy);
+      color: #EDE8DA;
+      padding: clamp(90px, 12vw, 150px) 0;
+      overflow: hidden
+    }
+
+    .lg-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(237, 232, 218, .2);
+      padding-bottom: 36px
+    }
+
+    #ledger h2 {
+      color: #F5F1E6
+    }
+
+    #ledger h2 em {
+      color: var(--gold-lt)
+    }
+
+    .lg-head p {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: #A9B2C4;
+      max-width: 40ch
+    }
+
+    .pair {
+      position: relative;
+      margin-top: clamp(40px, 5vw, 64px);
+      height: clamp(430px, 48vw, 560px)
+    }
+
+    #bridgeLines {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible
+    }
+
+    #bridgeLines .trace {
+      fill: none;
+      stroke: rgba(237, 232, 218, .62);
+      stroke-width: 1.4;
+      stroke-dasharray: 6 9;
+      stroke-linecap: round
+    }
+
+    #bridgeLines .node {
+      fill: #F0D9A5
+    }
+
+    .pairq {
+      position: absolute;
+      max-width: min(30ch, 44%)
+    }
+
+    .pairq.one {
+      top: 2%;
+      left: 0
+    }
+
+    .pairq.two {
+      bottom: 2%;
+      right: 0;
+      text-align: right;
+      margin-left: auto
+    }
+
+    .pairq .stamp {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #8C96AA;
+      margin-bottom: 20px
+    }
+
+    .pairq.two .stamp {
+      justify-content: flex-end
+    }
+
+    .pairq .stamp b {
+      font-family: "Playfair Display", serif;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      color: #F0D9A5;
+      text-transform: none
+    }
+
+    .pairq .said {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(21px, 2.6vw, 38px);
+      line-height: 1.3;
+      color: #F5F1E6
+    }
+
+    .pairq.two .said {
+      color: #EDE8DA
+    }
+
+    .pairq .src {
+      margin-top: 22px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: #7F8A9E;
+      line-height: 1.7
+    }
+
+    .pairq .src em {
+      font-style: normal;
+      color: #B4532A;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: 10px;
+      display: block;
+      margin-bottom: 4px
+    }
+
+    @media(max-width:900px) {
+      .pair {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 44px
+      }
+
+      #bridgeLines {
+        display: none
+      }
+
+      .pairq,
+      .pairq.one,
+      .pairq.two {
+        position: static;
+        max-width: none;
+        text-align: left
+      }
+
+      .pairq.two .stamp {
+        justify-content: flex-start
+      }
+    }
