@@ -1,5 +1,6 @@
 import { navLinks } from '../../data/navLinks';
 import BrandMark from './BrandMark';
+import FlyLetters from './FlyLetters';
 
 export default function Header() {
   return (
@@ -17,6 +18,7 @@ export default function Header() {
           </div>
         </div>
       </header>
+      <FlyLetters />
     </>
   );
 }
