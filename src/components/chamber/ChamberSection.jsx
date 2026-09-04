@@ -1,3 +1,4 @@
+import OrderBox from './OrderBox';
 
 export default function ChamberSection() {
   return (
@@ -16,6 +17,7 @@ export default function ChamberSection() {
               <li>A cohort tracker that shows how your age group moves as a division closes</li>
             </ul>
           </div>
+          <OrderBox />
         </div>
       </div>
     </section>
