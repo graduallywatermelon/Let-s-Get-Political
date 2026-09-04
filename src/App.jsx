@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import Hero from './components/hero/Hero';
 import SeparatorQuote from './components/quote/SeparatorQuote';
 import ChamberSection from './components/chamber/ChamberSection';
+import DraftBench from './components/draft/DraftBench';
 import OrderPaper from './components/orderpaper/OrderPaper';
 import LedgerSection from './components/ledger/LedgerSection';
 import { useReveal } from './hooks/useReveal';
@@ -19,6 +20,7 @@ export default function App() {
         <Hero />
         <SeparatorQuote />
         <ChamberSection />
+        <DraftBench />
         <OrderPaper />
         <LedgerSection />
       </main>
