@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import Hero from './components/hero/Hero';
 import SeparatorQuote from './components/quote/SeparatorQuote';
 import ChamberSection from './components/chamber/ChamberSection';
+import ChamberCanvas from './components/chamber/ChamberCanvas';
 import DraftBench from './components/draft/DraftBench';
 import OrderPaper from './components/orderpaper/OrderPaper';
 import LedgerSection from './components/ledger/LedgerSection';
@@ -15,6 +16,7 @@ export default function App() {
     <>
       <Guides />
       <Cursor />
+      <ChamberCanvas />
       <Header />
       <main id="top">
         <Hero />
