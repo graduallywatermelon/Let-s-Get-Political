@@ -138,7 +138,7 @@ export default function ChamberCanvas() {
            const past = clamp01(-r.bottom / (innerHeight * .62));
            const vis = enter * (1 - past);
            cc.style.opacity = (vis * .92).toFixed(3);
-           const rp = 0;
+           const rp = clamp01((innerHeight - r.top) / (r.height + innerHeight));
            pDamp += (rp - pDamp) * Math.min(1, dt * 3.4);
            const q = pDamp;
            chamber.rotation.y = lerp(-1.31, 4.71, q) + Math.sin(t * .12) * .03;
