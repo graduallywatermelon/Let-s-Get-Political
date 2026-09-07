@@ -1,0 +1,285 @@
+#arena {
+      border-top: 1px solid var(--line);
+      background: #F0EBDD;
+      padding: 0 clamp(22px, 4vw, 60px)
+    }
+
+    .arena-grid {
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      max-width: 1320px;
+      margin: 0 auto
+    }
+
+    .a-sticky {
+      position: sticky;
+      top: 76px;
+      height: calc(100svh - 76px);
+      border-right: 1px solid var(--line);
+      padding: clamp(40px, 5vw, 80px) clamp(24px, 3vw, 56px) clamp(40px, 5vw, 80px) 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between
+    }
+
+    .a-sticky h2 {
+      margin-top: 18px;
+      font-size: clamp(36px, 4.2vw, 62px)
+    }
+
+    .a-note {
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.9;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--mute)
+    }
+
+    .a-prog {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 40px
+    }
+
+    .a-step {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #9AA1AE;
+      transition: .3s
+    }
+
+    .a-step .bar {
+      width: 40px;
+      height: 2px;
+      background: #CFC7B2;
+      transition: .35s
+    }
+
+    .a-step.on {
+      color: var(--ink)
+    }
+
+    .a-step.on .bar {
+      background: var(--gold);
+      width: 66px
+    }
+
+    .a-list {
+      padding-left: clamp(28px, 4vw, 60px)
+    }
+
+    .a-item {
+      min-height: 92svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 70px 0;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .a-item:last-child {
+      border-bottom: none
+    }
+
+    .a-head {
+      display: flex;
+      align-items: baseline;
+      gap: 22px;
+      margin-bottom: 24px
+    }
+
+    .a-idx {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--gold)
+    }
+
+    .a-item h3 {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-size: clamp(30px, 3.5vw, 50px);
+      line-height: 1.02
+    }
+
+    .a-body {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: clamp(26px, 3.4vw, 50px);
+      align-items: center
+    }
+
+    .a-body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #3E4656;
+      max-width: 48ch
+    }
+
+    .fig {
+      position: relative;
+      aspect-ratio: 4/3;
+      border: 1.5px solid rgba(27, 36, 50, .3);
+      background: #F7F3E9;
+      overflow: hidden
+    }
+
+    .fig .tag {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--ink);
+      color: var(--ivory);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 7px 12px;
+      z-index: 3
+    }
+
+    .fate {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(16px, 2vw, 30px);
+      padding: 44px 26px 26px
+    }
+
+    .card-f {
+      width: clamp(92px, 12%, 116px);
+      height: clamp(150px, 42%, 182px);
+      flex-shrink: 0;
+      border: 2px solid var(--ink);
+      background: #fff;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: clamp(30px, 4vw, 46px);
+      color: var(--gold);
+      box-shadow: 7px 7px 0 rgba(27, 36, 50, .13)
+    }
+
+    .card-f.motion {
+      width: clamp(130px, 32%, 190px);
+      height: auto;
+      min-height: clamp(118px, 34%, 150px);
+      padding: clamp(12px, 1.6vw, 20px) clamp(10px, 1.3vw, 16px);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: clamp(15px, 1.7vw, 22px);
+      line-height: 1.24;
+      color: #3E4656;
+      transform: rotate(7deg)
+    }
+
+    .bracket {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around
+    }
+
+    .slot {
+      text-align: center
+    }
+
+    .slot .box {
+      width: 78px;
+      height: 78px;
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      margin: 0 auto 12px
+    }
+
+    .slot.a .box {
+      background: var(--navy);
+      color: var(--gold-lt)
+    }
+
+    .slot span {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--mute)
+    }
+
+    .linkline {
+      width: 70px;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--ink) 0 8px, transparent 8px 16px);
+      position: relative
+    }
+
+    .linkline::after {
+      content: "VS";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #F7F3E9;
+      padding: 6px;
+      font-size: 12px;
+      font-weight: 800
+    }
+
+    .clauses {
+      position: absolute;
+      inset: 54px 26px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: center
+    }
+
+    .clause {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1.5px solid rgba(27, 36, 50, .3);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: #fff;
+      font-size: 12.5px;
+      font-weight: 600
+    }
+
+    .clause b {
+      color: var(--gold)
+    }
+
+    .clause .fa {
+      margin-left: auto;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: 99px;
+      background: #E7DFCB;
+      color: #6A5320;
+      white-space: nowrap
+    }
