@@ -12,3 +12,9 @@ export const arenaModes = [
     text: 'Carry any live bill from the Chamber onto the floor and argue its actual clauses, for or against. The transcript stays attached to the legislation — required reading for every vote cast after yours.',
   },
 ];
+
+export const arenaClauses = [
+  { article: 'Art. 4', label: 'Duty to publish impact data', verdict: 'For · 62%' },
+  { article: 'Art. 7', label: 'Liability for automated decisions', verdict: 'Against · 44%' },
+  { article: 'Art. 9', label: 'Enforcement & penalties', verdict: 'For · 71%' },
+];
