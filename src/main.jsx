@@ -9,6 +9,7 @@ import './styles/hero.css';
 import './styles/quote.css';
 import './styles/chamber.css';
 import './styles/arena.css';
+import './styles/roadmap.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

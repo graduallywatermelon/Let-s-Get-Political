@@ -1,0 +1,91 @@
+#roadmap {
+      padding: clamp(90px, 12vw, 150px) 0;
+      background: var(--ivory);
+      border-top: 1px solid var(--line)
+    }
+
+    .tl {
+      margin-top: clamp(46px, 6vw, 80px);
+      position: relative;
+      padding-left: 34px
+    }
+
+    .tl::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(var(--gold), rgba(169, 124, 47, .15))
+    }
+
+    .tli {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(24px, 3vw, 60px);
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+      position: relative
+    }
+
+    .tli::before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      top: 38px;
+      width: 16px;
+      height: 16px;
+      background: var(--ivory);
+      border: 3px solid var(--gold);
+      border-radius: 50%
+    }
+
+    .tli h4 {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-size: clamp(20px, 2.2vw, 28px)
+    }
+
+    .tli .when {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px
+    }
+
+    .tli p {
+      font-size: 15.5px;
+      line-height: 1.75;
+      color: #3E4656;
+      margin-top: 10px;
+      max-width: 52ch
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 99px;
+      margin-top: 14px
+    }
+
+    .pill.ship {
+      background: var(--green);
+      color: #fff
+    }
+
+    .pill.build {
+      background: var(--gold);
+      color: #fff
+    }
+
+    .pill.design {
+      border: 1.5px solid var(--ink);
+      color: var(--ink)
+    }

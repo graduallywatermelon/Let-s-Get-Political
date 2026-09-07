@@ -9,6 +9,7 @@ import DraftBench from './components/draft/DraftBench';
 import ArenaSection from './components/arena/ArenaSection';
 import OrderPaper from './components/orderpaper/OrderPaper';
 import LedgerSection from './components/ledger/LedgerSection';
+import RoadmapSection from './components/roadmap/RoadmapSection';
 import { useReveal } from './hooks/useReveal';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
         <ArenaSection />
         <OrderPaper />
         <LedgerSection />
+        <RoadmapSection />
       </main>
     </>
   );
