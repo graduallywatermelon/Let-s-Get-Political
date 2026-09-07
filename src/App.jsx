@@ -6,6 +6,7 @@ import SeparatorQuote from './components/quote/SeparatorQuote';
 import ChamberSection from './components/chamber/ChamberSection';
 import ChamberCanvas from './components/chamber/ChamberCanvas';
 import DraftBench from './components/draft/DraftBench';
+import ArenaSection from './components/arena/ArenaSection';
 import OrderPaper from './components/orderpaper/OrderPaper';
 import LedgerSection from './components/ledger/LedgerSection';
 import { useReveal } from './hooks/useReveal';
@@ -23,6 +24,7 @@ export default function App() {
         <SeparatorQuote />
         <ChamberSection />
         <DraftBench />
+        <ArenaSection />
         <OrderPaper />
         <LedgerSection />
       </main>

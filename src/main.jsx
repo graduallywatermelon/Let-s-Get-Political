@@ -8,6 +8,7 @@ import './styles/header.css';
 import './styles/hero.css';
 import './styles/quote.css';
 import './styles/chamber.css';
+import './styles/arena.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
