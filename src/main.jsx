@@ -10,6 +10,7 @@ import './styles/quote.css';
 import './styles/chamber.css';
 import './styles/arena.css';
 import './styles/roadmap.css';
+import './styles/final.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
