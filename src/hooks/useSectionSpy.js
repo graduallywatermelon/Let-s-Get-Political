@@ -9,7 +9,7 @@ export function useSectionSpy(containerRef, itemSelector) {
     const io = new IntersectionObserver((entries) => entries.forEach((e) => {
       if (!e.isIntersecting) return;
       setActive(+e.target.dataset.step);
-    }), { threshold: 0 });
+    }), { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
     items.forEach((it) => io.observe(it));
     return () => io.disconnect();
   }, [containerRef, itemSelector]);
