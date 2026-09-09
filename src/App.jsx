@@ -11,6 +11,7 @@ import OrderPaper from './components/orderpaper/OrderPaper';
 import LedgerSection from './components/ledger/LedgerSection';
 import RoadmapSection from './components/roadmap/RoadmapSection';
 import FinalCTA from './components/final/FinalCTA';
+import GavelCanvas from './components/final/GavelCanvas';
 import { useReveal } from './hooks/useReveal';
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
       <Guides />
       <Cursor />
       <ChamberCanvas />
+      <GavelCanvas />
       <Header />
       <main id="top">
         <Hero />
