@@ -32,7 +32,7 @@ export default function SubscribeForm() {
         />
         <button type="submit" data-cursor="Send">Weekly paper</button>
       </form>
-      <div id="opNote" className={noteOn ? 'on' : ''}>
+      <div id="opNote" className={noteOn ? 'on' : ''} aria-live="polite">
         Added &mdash; the paper posts each Friday, 09:00 GMT.
       </div>
     </>
