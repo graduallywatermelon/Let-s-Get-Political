@@ -1,41 +1,18 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+
 import Cursor from './components/chrome/Cursor';
 import Guides from './components/chrome/Guides';
-import Header from './components/header/Header';
-import Hero from './components/hero/Hero';
-import SeparatorQuote from './components/quote/SeparatorQuote';
-import ChamberSection from './components/chamber/ChamberSection';
-import ChamberCanvas from './components/chamber/ChamberCanvas';
-import DraftBench from './components/draft/DraftBench';
-import ArenaSection from './components/arena/ArenaSection';
-import OrderPaper from './components/orderpaper/OrderPaper';
-import LedgerSection from './components/ledger/LedgerSection';
-import RoadmapSection from './components/roadmap/RoadmapSection';
-import FinalCTA from './components/final/FinalCTA';
-import GavelCanvas from './components/final/GavelCanvas';
-import Footer from './components/footer/Footer';
-import { useReveal } from './hooks/useReveal';
 
 export default function App() {
-  useReveal();
   return (
     <>
       <Guides />
       <Cursor />
-      <ChamberCanvas />
-      <GavelCanvas />
-      <Header />
-      <main id="top">
-        <Hero />
-        <SeparatorQuote />
-        <ChamberSection />
-        <DraftBench />
-        <ArenaSection />
-        <OrderPaper />
-        <LedgerSection />
-        <RoadmapSection />
-        <FinalCTA />
-      </main>
-      <Footer />
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<Home />} />
+      </Routes>
     </>
   );
 }
