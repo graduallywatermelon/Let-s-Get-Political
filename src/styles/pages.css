@@ -421,6 +421,194 @@
   margin-bottom: 8px
 }
 
+.bill-hero {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: clamp(26px, 3vw, 42px)
+}
+
+.bh-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 20px
+}
+
+.bh-crumbs a {
+  color: var(--gold);
+  text-decoration: none
+}
+
+.bh-crumbs a:hover {
+  text-decoration: underline
+}
+
+.bill-hero h1 {
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 50px);
+  line-height: 1.12;
+  max-width: 24ch
+}
+
+.bh-meta {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--mute)
+}
+
+.bh-meta b {
+  color: var(--ink)
+}
+
+.bill-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: clamp(28px, 4vw, 60px);
+  margin-top: clamp(34px, 4vw, 56px)
+}
+
+.sect-kick {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px
+}
+
+.sect-kick::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line)
+}
+
+.summary-lead {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: clamp(18px, 1.7vw, 23px);
+  line-height: 1.55;
+  margin-bottom: 22px
+}
+
+.summary-list {
+  list-style: none;
+  display: grid;
+  gap: 12px
+}
+
+.summary-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink)
+}
+
+.summary-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  transform: rotate(45deg)
+}
+
+.doclink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 5px;
+  transition: all .3s cubic-bezier(.4, 0, .3, 1)
+}
+
+.doclink i {
+  font-style: normal;
+  color: var(--gold);
+  transition: transform .3s
+}
+
+.doclink:hover {
+  color: var(--gold)
+}
+
+.doclink:hover i {
+  transform: translate(2px, -2px)
+}
+
+.clauses-preview {
+  margin-top: 34px;
+  display: grid;
+  gap: 0
+}
+
+.cl-row {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 22px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line)
+}
+
+.cl-row:last-child {
+  border-bottom: 1px solid var(--line)
+}
+
+.cl-n {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold)
+}
+
+.cl-h {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 6px
+}
+
+.cl-p {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--mute)
+}
+
+.bill-side {
+  display: grid;
+  gap: 24px;
+  align-content: start;
+  position: sticky;
+  top: 92px
+}
+
+.side-card {
+  background: #FBF8F0;
+  border-top: 2px solid var(--navy);
+  padding: 24px
+}
+
 .votebox .vb-kick {
   font-size: 10.5px;
   font-weight: 800;
@@ -1040,5 +1228,110 @@
   font-size: 17px;
   line-height: 1.7;
   padding: 12px 0
+}
+
+.docwrap {
+  background: #F7F3E8;
+  min-height: 100vh
+}
+
+.docbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--navy);
+  color: var(--ivory);
+  padding: 14px clamp(20px, 4vw, 48px)
+}
+
+.docbar a {
+  color: var(--gold-lt);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none
+}
+
+.docbar span {
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(237, 232, 218, .6)
+}
+
+.doc-sheet {
+  max-width: 740px;
+  margin: clamp(26px, 5vw, 60px) auto clamp(70px, 9vw, 110px);
+  background: #FDFBF4;
+  border-top: 3px double var(--gold);
+  padding: clamp(34px, 6vw, 80px);
+  box-shadow: 0 40px 90px -35px rgba(27, 36, 50, .35)
+}
+
+.doc-head {
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 30px;
+  margin-bottom: 34px
+}
+
+.doc-head .crest {
+  font-family: "Playfair Display", serif;
+  letter-spacing: .3em;
+  font-size: 13px;
+  color: var(--gold)
+}
+
+.doc-head h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: clamp(24px, 3.4vw, 38px);
+  line-height: 1.25;
+  margin: 16px 0 10px
+}
+
+.doc-head p {
+  font-size: 12.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--mute)
+}
+
+.doc-clause h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 4px
+}
+
+.doc-clause .cl-h {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px
+}
+
+.doc-clause p {
+  font-family: "Playfair Display", serif;
+  font-size: 16.5px;
+  line-height: 1.95;
+  margin-bottom: 14px
+}
+
+.doc-foot {
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--mute)
 }
 
