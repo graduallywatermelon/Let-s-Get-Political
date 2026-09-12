@@ -202,3 +202,75 @@
   color: var(--gold)
 }
 
+.pill {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border: 1px solid currentColor;
+  white-space: nowrap
+}
+
+.pill-live {
+  color: #2E7D5B
+}
+
+.pill-gold {
+  color: var(--gold)
+}
+
+.pill-mute {
+  color: var(--mute)
+}
+
+.pill-review {
+  color: #B4622D
+}
+
+.pill-flagged {
+  color: #A3312E
+}
+
+.srcholder {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap
+}
+
+.src-kick {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--mute)
+}
+
+.srchips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap
+}
+
+.srclink {
+  font-size: 12px;
+  letter-spacing: .03em;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(27, 36, 50, .3);
+  padding-bottom: 2px;
+  transition: all .25s
+}
+
+.srclink i {
+  font-style: normal;
+  margin-left: 5px;
+  color: var(--gold)
+}
+
+.srclink:hover {
+  border-color: var(--gold);
+  color: var(--gold)
+}
+
