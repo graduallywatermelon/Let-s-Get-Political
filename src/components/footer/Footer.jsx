@@ -1,5 +1,6 @@
 import '../../styles/footer.css'
 import { footerColumns } from '../../data/footerLinks';
+import SmartAnchor from '../common/SmartAnchor';
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
           <div key={col.title}>
             <h5>{col.title}</h5>
             {col.links.map((l, i) => (
-              <a key={`${col.title}-${i}`} href={l.href}>{l.label}</a>
+              <SmartAnchor key={`${col.title}-${i}`} href={l.href}>{l.label}</SmartAnchor>
             ))}
           </div>
         ))}
