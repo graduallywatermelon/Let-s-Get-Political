@@ -1,12 +1,7 @@
-import { useRef } from 'react';
-import { useCountUp } from '../../hooks/useCountUp';
-
 const LINES = [92, 100, 84, 97, 58];
 const TARGET = 2318;
 
 export default function PaperCard() {
-  const cosignRef = useRef(null);
-  const count = useCountUp(cosignRef, TARGET);
   return (
     <div className="paper reveal">
       <div className="ph">Clean Air in Cities Bill</div>
@@ -17,7 +12,7 @@ export default function PaperCard() {
       <div className="signrow">
         <div className="avatars"><i></i><i></i><i></i><i></i></div>
         <div className="cs">
-          <b ref={cosignRef}>{count.toLocaleString()}</b> citizens have co-signed this draft
+          <b>{TARGET.toLocaleString()}</b> citizens have co-signed this draft
         </div>
       </div>
       <span className="stamp3">First Reading</span>
