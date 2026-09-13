@@ -173,8 +173,8 @@ function ChamberScene({ stageRef }) {
   const chamber = useRef(null);
   const chand = useRef(null);
   const damp = useRef(0);
-  useFrame(({ clock, camera, size }) => {
-    const dt = Math.min(clock.getDelta(), .05), t = clock.elapsedTime;
+  useFrame(({ clock, camera, size }, delta) => {
+    const dt = Math.min(delta, .05), t = clock.elapsedTime;
     const secEl = document.getElementById('chamberSec');
     if (!secEl || !chamber.current) return;
     const r = secEl.getBoundingClientRect();
