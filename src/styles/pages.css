@@ -1237,6 +1237,62 @@
   color: var(--gold)
 }
 
+.verify-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  padding: 18px 22px;
+  background: var(--navy);
+  color: #EDE8DA
+}
+
+.verify-row p {
+  flex: 1;
+  min-width: 220px;
+  font-size: 13.5px;
+  line-height: 1.7
+}
+
+.verify-btn {
+  background: none;
+  border: 1px solid rgba(245, 241, 230, .5);
+  color: var(--ivory);
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 11px 18px;
+  cursor: pointer;
+  transition: all .25s
+}
+
+.verify-btn:hover {
+  border-color: var(--gold-lt);
+  color: var(--gold-lt)
+}
+
+.verify-btn.on {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #14213A
+}
+
+.flag-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(163, 49, 46, .4);
+  background: rgba(163, 49, 46, .06);
+  color: #A3312E;
+  font-size: 13.5px;
+  line-height: 1.7;
+  padding: 14px 20px;
+  margin-bottom: 24px
+}
+
 .rd-backdrop {
   position: fixed;
   inset: 0;
