@@ -7,6 +7,7 @@ import BillTextPage from './pages/BillTextPage';
 import ProposeBillPage from './pages/ProposeBillPage';
 import LedgerPage from './pages/LedgerPage';
 import LedgerDetailPage from './pages/LedgerDetailPage';
+import ProposeLedgerPage from './pages/ProposeLedgerPage';
 
 import Cursor from './components/chrome/Cursor';
 import Guides from './components/chrome/Guides';
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/bills/new" element={<ProposeBillPage />} />
         <Route path="/bill/:id" element={<BillDetailPage />} />
         <Route path="/ledger" element={<LedgerPage />} />
+        <Route path="/ledger/new" element={<ProposeLedgerPage />} />
         <Route path="/ledger/:id" element={<LedgerDetailPage />} />
       </Route>
       <Route path="*" element={<Home />} />
