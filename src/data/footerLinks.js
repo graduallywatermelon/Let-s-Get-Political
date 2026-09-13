@@ -3,7 +3,7 @@ export const footerColumns = [
     { href: '#chamberSec', label: 'The Chamber' },
     { href: '#draft', label: 'Draft Bench' },
     { href: '#arena', label: 'The Arena' },
-    { href: '#ledger', label: 'The Ledger' },
+    { to: '/ledger', label: 'The Ledger' },
   ] },
   { title: 'Institutions', links: [
     { href: '#', label: 'United Nations' },

@@ -4,3 +4,4 @@ dist
 *.local
 *.md
 *.log
+%SystemDrive%/

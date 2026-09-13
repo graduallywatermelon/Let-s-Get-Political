@@ -45,11 +45,11 @@ function useChamberResources() {
       marbleSolid: new THREE.MeshStandardMaterial({ color: 0xEDE7D6, roughness: .38, metalness: .04 }),
       wood: new THREE.MeshStandardMaterial({ map: woodTex, roughness: .5, metalness: .05 }),
       woodLt: new THREE.MeshStandardMaterial({ map: woodTexLt, roughness: .45, metalness: .05 }),
-      leather: new THREE.MeshStandardMaterial({ color: 0x6E2F33, roughness: .72, metalness: 0 }),
+      leather: new THREE.MeshStandardMaterial({ color: 0x6E2F33, roughness: .72, metalness: 0, side: THREE.DoubleSide }),
       brass: new THREE.MeshStandardMaterial({ color: 0xC9A24B, roughness: .26, metalness: .92 }),
       seatGeos: [
         new THREE.BoxGeometry(.8, .14, .66),
-        new THREE.CylinderGeometry(.43, .43, .52, 20, 1, true, Math.PI / 2, Math.PI),
+        new THREE.CylinderGeometry(.5, .5, .5, 24, 1, true, Math.PI - .95, 1.9),
         new THREE.CylinderGeometry(.07, .09, .46, 10),
         new THREE.CylinderGeometry(.3, .36, .06, 18),
       ],
@@ -84,7 +84,7 @@ function SeatRing({ r, n, yB, res }) {
       const a = A0 + ((i + .5) / n) * SPAN;
       const x = Math.cos(a) * r, z = Math.sin(a) * r, face = Math.atan2(-x, -z);
       place(i, meshes.current[0], x, yB + .46, z, face);
-      place(i, meshes.current[1], Math.cos(a) * (r + .28), yB + .84, Math.sin(a) * (r + .28), face);
+      place(i, meshes.current[1], x, yB + .72, z, face);
       place(i, meshes.current[2], x, yB + .24, z, 0);
       place(i, meshes.current[3], x, yB + .03, z, 0);
     }

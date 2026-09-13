@@ -15,7 +15,7 @@ export default function Footer() {
           <div key={col.title}>
             <h5>{col.title}</h5>
             {col.links.map((l, i) => (
-              <SmartAnchor key={`${col.title}-${i}`} href={l.href}>{l.label}</SmartAnchor>
+              <SmartAnchor key={`${col.title}-${i}`} to={l.to} href={l.href}>{l.label}</SmartAnchor>
             ))}
           </div>
         ))}
