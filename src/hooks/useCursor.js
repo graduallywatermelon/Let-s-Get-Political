@@ -16,22 +16,24 @@ export function useCursor() {
       raf = requestAnimationFrame(cursorLoop);
     };
     cursorLoop();
-    const nodes = document.querySelectorAll('[data-cursor]');
-    const enters = [], leaves = [];
-    nodes.forEach((el) => {
-      const enter = () => {
-        cLabel.textContent = el.dataset.cursor;
-        cursor.classList.add('big');
-        if (el.matches('.nav nav a')) el.classList.add('blind');
-      };
-      const leave = () => {
-        cursor.classList.remove('big');
-        el.classList.remove('blind');
-      };
-      el.addEventListener('mouseenter', enter);
-      el.addEventListener('mouseleave', leave);
-      enters.push([el, enter]); leaves.push([el, leave]);
-    });
+    let current = null;
+    const clear = () => {
+      if (!current) return;
+      cursor.classList.remove('big');
+      if (current.matches('.nav nav a')) current.classList.remove('blind');
+      current = null;
+    };
+    const onOver = (e) => {
+      const el = e.target && e.target.closest ? e.target.closest('[data-cursor]') : null;
+      if (el === current) return;
+      clear();
+      if (!el) return;
+      current = el;
+      cLabel.textContent = el.dataset.cursor;
+      cursor.classList.add('big');
+      if (el.matches('.nav nav a')) el.classList.add('blind');
+    };
+    document.addEventListener('pointerover', onOver);
     const hide = () => { cursor.style.opacity = 0 };
     const show = () => { cursor.style.opacity = 1 };
     document.addEventListener('mouseleave', hide);
@@ -39,8 +41,7 @@ export function useCursor() {
     return () => {
       cancelAnimationFrame(raf);
       removeEventListener('pointermove', onMove);
-      enters.forEach(([el, fn]) => el.removeEventListener('mouseenter', fn));
-      leaves.forEach(([el, fn]) => el.removeEventListener('mouseleave', fn));
+      document.removeEventListener('pointerover', onOver);
       document.removeEventListener('mouseleave', hide);
       document.removeEventListener('mouseenter', show);
     };
