@@ -1079,6 +1079,122 @@
   color: var(--ivory)
 }
 
+.ffcard {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: clamp(10px, 2vw, 28px);
+  background: #FBF8F0;
+  border-top: 2px solid var(--navy);
+  padding: clamp(22px, 3vw, 34px);
+  margin-bottom: 26px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform .35s cubic-bezier(.4, 0, .3, 1), box-shadow .35s cubic-bezier(.4, 0, .3, 1)
+}
+
+.ffcard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 48px -20px rgba(27, 36, 50, .3)
+}
+
+.ff-who {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-bottom: 1px dashed rgba(27, 36, 50, .25);
+  padding-bottom: 16px
+}
+
+.ff-who h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(19px, 1.8vw, 24px)
+}
+
+.ff-role {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--mute)
+}
+
+.ff-half {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0
+}
+
+.ff-stamp {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--mute)
+}
+
+.ff-quote {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(15px, 1.4vw, 19px);
+  line-height: 1.55
+}
+
+.ff-half.then .ff-quote::before {
+  content: "\201C"
+}
+
+.ff-half.then .ff-quote::after {
+  content: "\201D"
+}
+
+.ff-now {
+  border-left: 2px solid var(--gold);
+  padding-left: clamp(14px, 2vw, 26px)
+}
+
+.ff-mid {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 56px
+}
+
+.ff-mid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1.5px dashed var(--gold)
+}
+
+.ff-mid span {
+  position: relative;
+  z-index: 1;
+  background: #FBF8F0;
+  padding: 14px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: var(--gold)
+}
+
+.ff-foot {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  border-top: 1px dashed rgba(27, 36, 50, .25);
+  padding-top: 14px;
+  font-size: 12.5px;
+  color: var(--mute)
+}
+
 .srcholder {
   display: flex;
   align-items: center;
