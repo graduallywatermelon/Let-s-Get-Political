@@ -18,20 +18,28 @@
       border-right: 1px solid var(--line)
     }
 
-    #chamberCanvas {
+    #chamberStage {
       position: fixed;
       inset: 0;
       z-index: 1;
       pointer-events: none;
-      opacity: 0
+      opacity: 0;
+      width: 100%;
+      height: 100%
     }
 
-    #gavelCanvas {
+    #gavelStage {
       position: fixed;
       inset: 0;
       z-index: 46;
       pointer-events: none;
-      display: none
+      display: none;
+      width: 100%;
+      height: 100%
+    }
+
+    #gavelStage.on {
+      display: block
     }
 
     main,
