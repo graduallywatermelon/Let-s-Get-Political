@@ -1,5 +1,6 @@
 import { navLinks } from '../../data/navLinks';
 import { useScrollProgress } from '../../hooks/useScrollProgress';
+import SmartAnchor from '../common/SmartAnchor';
 import BrandMark from './BrandMark';
 import FlyLetters from './FlyLetters';
 
@@ -12,11 +13,11 @@ export default function Header() {
           <BrandMark />
           <nav>
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} data-cursor={l.cursor}>{l.label}</a>
+              <SmartAnchor key={l.to || l.href} to={l.to} href={l.href} data-cursor={l.cursor}>{l.label}</SmartAnchor>
             ))}
           </nav>
           <div className="nav-right">
-            <a className="nav-cta" href="#final" data-cursor="Enter">Enter the Floor</a>
+            <SmartAnchor className="nav-cta" href="#final" data-cursor="Enter">Enter the Floor</SmartAnchor>
           </div>
           <span id="progress" ref={barRef}></span>
         </div>
