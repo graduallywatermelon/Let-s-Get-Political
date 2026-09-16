@@ -58,7 +58,7 @@ export default function LedgerPage() {
           <button key={k} className={'chip' + (status === k ? ' on' : '')} onClick={() => setStatus(k)}>{label}</button>
         ))}
         <input className="searchbox" type="search" placeholder="Search a person, an office, a quote…" data-cursor="Type"
-          value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the ledger" data-cursor="Type" />
+          value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the ledger" />
       </div>
       <div className="list-meta">
         {shown.length} of {records.length} pairs &middot; proposed entries carry an “awaiting review” stamp until the

@@ -54,7 +54,7 @@ export default function BillsPage() {
           <button key={k} className={'chip' + (org === k ? ' on' : '')} onClick={() => setOrg(k)} data-cursor="Show">{label}</button>
         ))}
         <input className="searchbox" type="search" placeholder="Search titles, references, summaries…" data-cursor="Type"
-          value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the bills" data-cursor="Type" />
+          value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the bills" />
       </div>
       <div className="list-meta">
         {shown.length} of {bills.length} texts &middot; citizen drafts carry a petition number, not a chamber one
