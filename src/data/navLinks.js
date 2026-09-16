@@ -1,6 +1,5 @@
 export const navLinks = [
-  { href: '#chamberSec', cursor: 'Chamber', label: 'The Chamber' },
-  { to: '/bills', cursor: 'Bills', label: 'The Bills' },
+  { to: '/bills', cursor: 'Chamber', label: 'The Chamber' },
   { href: '#draft', cursor: 'Draft', label: 'Draft Bench' },
   { to: '/ledger', cursor: 'Tracker', label: 'Tracker' },
   { href: '#arena', cursor: 'Arena', label: 'The Arena' },
